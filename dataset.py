@@ -1,15 +1,3 @@
-                                                                                           """
-Severstal 钢铁表面缺陷检测 — 数据集模块
-==========================================
-实现 RLE 行程编码解码、自定义 Dataset 类、Albumentations 数据增强流水线。
-
-RLE 格式说明 (Kaggle Severstal):
-  - 图像尺寸固定为 256×1600 (H×W)，单张图像像素总数 = 409,600。
-  - RLE 字符串由空格分隔的整数对组成: "pixel_start run_length"。
-  - pixel_start 使用 **1-based 索引**，且像素编号按 **列优先 (Fortran order)** 排列，
-    即先沿行方向(高度)从上到下遍历完第一列，再进入下一列。
-  - 空字符串或 NaN 表示该图像不含此类缺陷 → 全零 Mask。
-"""
 
 import numpy as np
 
